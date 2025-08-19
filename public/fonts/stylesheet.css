@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Goldplay';
+  src: url('Goldplay-SemiBold.eot');
+  src:
+    local('Goldplay SemiBold'),
+    local('Goldplay-SemiBold'),
+    url('Goldplay-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('Goldplay-SemiBold.woff2') format('woff2'),
+    url('Goldplay-SemiBold.woff') format('woff'),
+    url('Goldplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Goldplay';
+  src: url('Goldplay-Regular.eot');
+  src:
+    local('Goldplay Regular'),
+    local('Goldplay-Regular'),
+    url('Goldplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Goldplay-Regular.woff2') format('woff2'),
+    url('Goldplay-Regular.woff') format('woff'),
+    url('Goldplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Goldplay';
+  src: url('Goldplay-Black.eot');
+  src:
+    local('Goldplay Black'),
+    local('Goldplay-Black'),
+    url('Goldplay-Black.eot?#iefix') format('embedded-opentype'),
+    url('Goldplay-Black.woff2') format('woff2'),
+    url('Goldplay-Black.woff') format('woff'),
+    url('Goldplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
