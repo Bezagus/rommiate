@@ -5,7 +5,7 @@ const Logo = ({ size = 70 }: { size?: number }) => {
   return (
     <div className="flex flex-row items-end">
       <Image src="/images/logo.png" alt="logo" width={size} height={size} />
-      <H1 className="text-primary -mb-2 -ml-1 hidden lg:block">ommiate</H1>
+      <H1 className="text-primary -mb-4 hidden lg:block font-black">ommiate</H1>
     </div>
   );
 };
