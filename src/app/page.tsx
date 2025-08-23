@@ -1,6 +1,8 @@
+import React from 'react';
 import { Copyright, Header, Phone } from '@/components';
+import { Button } from '@/styles';
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="h-svh w-svw overflow-hidden flex flex-col justify-center relative">
       <Header />
@@ -8,4 +10,6 @@ export default function Home() {
       <Copyright />
     </main>
   );
-}
+};
+
+export default Home;
