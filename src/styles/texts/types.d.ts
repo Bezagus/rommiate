@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface DefaultProps {
-  weight?: 'font-medium' | 'font-bold' | 'font-black';
+  weight?: 'font-medium' | 'font-bold' | 'font-black' | 'font-light';
   font?: 'font-nunito' | 'font-gold';
   className?: string;
   children: React.ReactNode;

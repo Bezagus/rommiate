@@ -1,6 +1,6 @@
 import { IconProps } from '@/styles/icons/types';
 
-const SearchIcon = ({ size = 24, color = '#FF6F3C', ...props }: IconProps) => {
+const SearchIcon = ({ size = 24, color = '#FF6F3C', strokeWidth = 1, ...props }: IconProps) => {
   return (
     <svg
       width={size}

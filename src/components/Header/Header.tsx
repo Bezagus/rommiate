@@ -5,8 +5,8 @@ import { Button, Link, MenuIcon, P } from '@/styles';
 
 const Header = () => {
   return (
-    <header className="absolute top-0 w-svw">
-      <div className="container flex justify-between items-center px-2  py-4">
+    <header className="w-svw h-[70px]">
+      <div className="container mx-auto flex justify-between items-center px-2  py-4">
         <Logo />
         <div className="hidden md:flex gap-8 items-center">
           <Link>
@@ -20,8 +20,11 @@ const Header = () => {
             <div className="h-11 w-11 aspect-square bg-gray rounded-full" />
           </div>
         </div>
-        <Button variant="secondary-text" className="px-0 active:scale-90">
-          <MenuIcon size={34} />
+        <Button
+          variant="secondary-text"
+          className="px-0 active:scale-90 justify-end md:hidden -mr-2"
+        >
+          <MenuIcon size={34} className="-mr-6" />
         </Button>
       </div>
     </header>

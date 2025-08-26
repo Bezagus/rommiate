@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { ButtonProps, Variant } from '@/styles/buttons/type';
 
 const styleDefault = {
-  text: 'hover:font-bold active:font-black',
-  small: 'py-[8px] px-[32px] text-mobile-small md:text-desktop-small',
-  medium: 'px-[42px] py-[10px] text-mobile-p md:text-desktop-p',
+  text: 'hover:font-bold active:font-black text-center',
+  small: 'py-[8px] px-[20px]  md:px-[32px] text-mobile-small md:text-desktop-small',
+  medium: 'px-[28px] md:px-[42px] py-[10px] text-mobile-p md:text-desktop-p',
 };
 
 const HASH_STYLE: Record<Variant, { className: string; iconColor: string }> = {
   'primary-fill': {
-    className: 'bg-primary text-white hover:bg-primary-600 active:bg-primary-700',
+    className: 'bg-primary text-white hover:bg-primary-600 active:bg-primary-700 hover:shadow-lg',
     iconColor: '#FFFFFF',
   },
   'primary-stoke': {
     className: 'border border-primary hover:bg-primary-50 active:bg-primary-100 text-primary',
     iconColor: '#ff6f3c',
   },
-  'primary-text': { className: 'text-primary' + styleDefault.text, iconColor: '#ff6f3c' },
+  'primary-text': { className: 'text-primary ' + styleDefault.text, iconColor: '#ff6f3c' },
   'secondary-stroke': {
     className:
       'border border-secondary hover:bg-secondary-50 active:bg-secondary-100 text-secondary',
@@ -37,25 +37,58 @@ const Button = ({
   children,
   leftIcon,
   rightIcon,
+  className,
+  href,
   ...props
-}: ButtonProps) => {
+}: ButtonProps & { href?: string }) => {
   const styles = HASH_STYLE[variant];
+  const commonClasses = classNames(
+    'font-gold font-medium rounded-full',
+    'flex items-center justify-center gap-2.5',
+    disabled && 'opacity-50 pointer-events-none',
+    styles.className,
+    styleDefault[size],
+    className
+  );
+
+  const iconProps = (icon: any) => ({
+    ...icon,
+    size: size === 'small' ? 12 : 16,
+    color: styles.iconColor,
+  });
+
+  if (href) {
+    const {
+      type,
+      onClick,
+      onDoubleClick,
+      onMouseDown,
+      onMouseUp,
+      onKeyDown,
+      onKeyUp,
+      onKeyPress,
+      ...anchorProps
+    } = props as AnchorHTMLAttributes<HTMLAnchorElement>;
+    return (
+      <a
+        href={href}
+        className={commonClasses}
+        tabIndex={disabled ? -1 : undefined}
+        aria-disabled={disabled}
+        {...anchorProps}
+      >
+        {leftIcon ? <leftIcon.icon {...iconProps(leftIcon)} /> : null}
+        {children}
+        {rightIcon ? <rightIcon.icon {...iconProps(rightIcon)} /> : null}
+      </a>
+    );
+  }
 
   return (
-    <button
-      disabled={disabled}
-      className={classNames(
-        'font-gold font-medium rounded-full',
-        'flex items-center gap-2.5',
-        disabled && 'opacity-50',
-        styles.className,
-        styleDefault[size]
-      )}
-      {...props}
-    >
-      {leftIcon ? <leftIcon.icon {...{ ...leftIcon, color: styles.iconColor }} /> : null}
+    <button disabled={disabled} className={commonClasses} {...props}>
+      {leftIcon ? <leftIcon.icon {...iconProps(leftIcon)} /> : null}
       {children}
-      {rightIcon ? <rightIcon.icon {...{ ...rightIcon, color: styles.iconColor }} /> : null}
+      {rightIcon ? <rightIcon.icon {...iconProps(rightIcon)} /> : null}
     </button>
   );
 };

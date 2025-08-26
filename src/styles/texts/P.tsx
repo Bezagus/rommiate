@@ -1,7 +1,7 @@
 import { TextProps } from '@/styles/texts/types';
 import classNames from 'classnames';
 
-const P = ({ font = 'font-gold', weight = 'font-medium', size = 'p', ...props }: TextProps) => {
+const P = ({ font = 'font-nunito', weight = 'font-medium', size = 'p', ...props }: TextProps) => {
   return (
     <p
       className={classNames(

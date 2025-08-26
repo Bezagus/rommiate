@@ -19,6 +19,9 @@ import SearchIcon from '@/styles/icons/SearchIcon';
 import UserIcon from '@/styles/icons/UserIcon';
 import UsersIcon from '@/styles/icons/UsersIcon';
 import WorldIcon from '@/styles/icons/WorldIcon';
+import WhatsappIcon from '@/styles/icons/WhatsappIcon';
+import LinkedinIcon from '@/styles/icons/LinkedinIcon';
+import InstagramIcon from '@/styles/icons/InstagramIcon';
 
 export {
   BathroomIcon,
@@ -42,4 +45,7 @@ export {
   UserIcon,
   UsersIcon,
   WorldIcon,
+  WhatsappIcon,
+  LinkedinIcon,
+  InstagramIcon,
 };

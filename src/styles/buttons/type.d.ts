@@ -20,4 +20,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: 'small' | 'medium';
   leftIcon?: IconsProps;
   rightIcon?: IconsProps;
+  type?: 'button' | 'submit' | 'reset';
+  href?: string;
 }
