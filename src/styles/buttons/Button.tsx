@@ -1,6 +1,7 @@
 import React, { AnchorHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { ButtonProps, Variant } from '@/styles/buttons/type';
+import { IconProps } from '@/styles/icons/types';
 
 const styleDefault = {
   text: 'hover:font-bold active:font-black text-center',
@@ -51,7 +52,7 @@ const Button = ({
     className
   );
 
-  const iconProps = (icon: any) => ({
+  const iconProps = (icon: IconProps) => ({
     ...icon,
     size: size === 'small' ? 12 : 16,
     color: styles.iconColor,

@@ -1,5 +1,6 @@
 import { InstagramIcon, LinkedinIcon, P, WhatsappIcon } from '@/styles';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 const Section = ({
   title,
@@ -70,8 +71,8 @@ const Footer = () => {
               Proximamente disponible para:
             </P>
             <div className="flex gap-3.5">
-              <img src="/images/apple-download.png" />
-              <img src="/images/android-download.png" />
+              <Image src="/images/apple-download.png" alt="apple download" />
+              <Image src="/images/android-download.png" alt="android download" />
             </div>
           </div>
         </div>
