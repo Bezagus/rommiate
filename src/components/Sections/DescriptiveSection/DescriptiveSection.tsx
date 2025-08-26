@@ -1,5 +1,6 @@
 import { Button, H3, H6 } from '@/styles';
 import React from 'react';
+import Image from 'next/image';
 
 interface Props {
   title: string;
@@ -26,7 +27,7 @@ const DescriptiveSection = ({ title, description, button, image }: Props) => {
           </Button>
         </div>
         <div className="flex mt-6">
-          <img src={image.src} alt={image.alt} className="w-3/4 lg:w-auto mx-auto" />
+          <Image src={image.src} alt={image.alt} className="w-3/4 lg:w-auto mx-auto" />
         </div>
       </div>
     </div>

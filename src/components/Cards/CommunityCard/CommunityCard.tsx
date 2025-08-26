@@ -1,5 +1,6 @@
 import { Button, H6, LocationIcon, P, UsersIcon, WorldIcon } from '@/styles';
 import React from 'react';
+import Image from 'next/image';
 
 export interface CommunityCardProps {
   title: string;
@@ -11,8 +12,9 @@ export interface CommunityCardProps {
 const CommunityCard = (props: CommunityCardProps) => {
   return (
     <div className="w-full border-2 border-secondary-50 rounded-[20px] overflow-hidden">
-      <img
+      <Image
         src="https://www.zonaprop.com.ar/noticias/wp-content/uploads/2022/05/1802502200.jpg"
+        alt="Community"
         className="h-[208px] w-full rounded-[20px]"
       />
       <div className="flex flex-col gap-3.5 px-3 py-5">

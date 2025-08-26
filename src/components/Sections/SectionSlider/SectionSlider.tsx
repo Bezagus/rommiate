@@ -1,7 +1,7 @@
-import { Button, ChevronIcon, H3, Link } from '@/styles';
+import React from 'react';
+import { ChevronIcon, H3, Link } from '@/styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
-import React, { useEffect, useState } from 'react';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -42,7 +42,7 @@ const SectionSlider = <T,>({ title, leftButton, CardComponent, data }: SectionSl
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              {/* @ts-expect-error */}
+              {/* @ts-expect-error: CardComponent props type does not match item type */}
               <CardComponent {...item} />
             </SwiperSlide>
           ))}
