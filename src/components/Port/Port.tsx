@@ -4,7 +4,6 @@ import { Button } from '@/styles';
 import { usePort } from '@/components/Port/usePort';
 import { SearchRommieForm, SearchCommunityForm, SearchHouseForm } from '@/components';
 import { OptionButton } from '@/components/Port/types';
-import Image from 'next/image';
 
 const Port = () => {
   const { optionsButtons, optionActive, setOptionActive } = usePort();
@@ -12,7 +11,7 @@ const Port = () => {
   return (
     <div className="bg-primary h-[calc(100vh-70px)] relative">
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70" />
-      <Image src="/images/port.jpg" alt="Portada Rommiate" className="object-cover w-full h-full" />
+      <img src="/images/port.jpg" alt="Portada Rommiate" className="object-cover w-full h-full" />
       <div className="absolute bottom-0 left-0 w-full h-full flex flex-col items-center justify-center">
         <div className="w-full px-4 lg:px-20 xl:w-[70vw] xl:px-0 2xl:w-[50vw]">
           <div className="bg-white rounded-t-[20px] md:px-3 py-2 w-full lg:w-2/3 2xl:w-1/2 flex justify-between px-4 pt-5 md:py-2">

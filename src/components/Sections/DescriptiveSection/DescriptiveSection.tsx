@@ -27,7 +27,7 @@ const DescriptiveSection = ({ title, description, button, image }: Props) => {
           </Button>
         </div>
         <div className="flex mt-6">
-          <Image src={image.src} alt={image.alt} className="w-3/4 lg:w-auto mx-auto" />
+          <img src={image.src} alt={image.alt} className="w-3/4 lg:w-auto mx-auto" />
         </div>
       </div>
     </div>

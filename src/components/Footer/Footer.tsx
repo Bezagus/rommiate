@@ -71,8 +71,8 @@ const Footer = () => {
               Proximamente disponible para:
             </P>
             <div className="flex gap-3.5">
-              <Image src="/images/apple-download.png" alt="apple download" />
-              <Image src="/images/android-download.png" alt="android download" />
+              <img src="/images/apple-download.png" alt="apple download" />
+              <img src="/images/android-download.png" alt="android download" />
             </div>
           </div>
         </div>
