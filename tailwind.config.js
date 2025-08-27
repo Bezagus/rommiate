@@ -30,6 +30,7 @@ module.exports = {
         white: '#FFFFFF',
         black: '#000000',
         gray: '#F5F5F5',
+        error: '#FF6F3C',
       },
       fontSize: {
         'desktop-h1': ['61.04px', { lineHeight: '72px' }],
