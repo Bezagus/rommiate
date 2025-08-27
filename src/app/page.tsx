@@ -1,11 +1,8 @@
-import { Copyright, Header, Phone } from '@/components';
+import React from 'react';
+import { HomePage } from '@/screens';
 
-export default function Home() {
-  return (
-    <main className="h-svh w-svw overflow-hidden flex flex-col justify-center relative">
-      <Header />
-      <Phone />
-      <Copyright />
-    </main>
-  );
-}
+const Home = () => {
+  return <HomePage />;
+};
+
+export default Home;

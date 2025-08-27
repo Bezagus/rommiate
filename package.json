@@ -10,16 +10,22 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
     "classnames": "^2.5.1",
     "next": "15.4.7",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.62.0",
+    "react-switch": "^7.1.0",
+    "swiper": "^11.2.10",
+    "yup": "^1.7.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.7",
+    "@types/yup": "^0.29.14",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.33.0",
     "eslint-config-next": "15.4.7",

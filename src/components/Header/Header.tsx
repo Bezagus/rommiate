@@ -1,16 +1,12 @@
-import { Logo } from '@/components';
+import HeaderDesktop from '@/components/Header/HeaderDesktop';
+import HeaderMobile from '@/components/Header/HeaderMobile';
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-2 md:px-10 py-4 absolute top-0 w-svw">
-      <Logo />
-      <a
-        href="mailto:help@bezlon.com"
-        className="text-desktop-p border-[1px] px-6 md:px-10 py-2 max-h-[42px] rounded-full border-primary text-primary flex items-center justify-center"
-      >
-        Contacto
-      </a>
-    </header>
+    <>
+      <HeaderDesktop />
+      <HeaderMobile />
+    </>
   );
 };
 

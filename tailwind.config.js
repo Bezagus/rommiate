@@ -29,6 +29,8 @@ module.exports = {
         },
         white: '#FFFFFF',
         black: '#000000',
+        gray: '#F5F5F5',
+        error: '#FF6F3C',
       },
       fontSize: {
         'desktop-h1': ['61.04px', { lineHeight: '72px' }],
@@ -52,6 +54,14 @@ module.exports = {
         nunito: ['Nunito', 'sans-serif'],
         gold: ['Goldplay', 'serif'],
       },
+    },
+    screens: {
+      xs: '425px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
   },
   plugins: [],
