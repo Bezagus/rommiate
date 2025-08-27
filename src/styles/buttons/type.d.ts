@@ -22,4 +22,5 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   rightIcon?: IconsProps;
   type?: 'button' | 'submit' | 'reset';
   href?: string;
+  padding?: boolean;
 }

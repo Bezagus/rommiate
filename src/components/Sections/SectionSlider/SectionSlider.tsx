@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronIcon, H3, Link } from '@/styles';
+import { ChevronIcon, H3, Link, Section } from '@/styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 
@@ -21,7 +21,7 @@ const SectionSlider = <T,>({ title, leftButton, CardComponent, data }: SectionSl
   const presenter = useSectionSlider();
 
   return (
-    <div className="container mx-auto my-10 w-svw px-2 md:px-4 lg:px-0">
+    <Section classNameContainer="my-10 w-svw">
       <div className="flex flex-row justify-between w-full">
         <H3 weight="font-bold" font="font-nunito">
           {title}
@@ -48,7 +48,7 @@ const SectionSlider = <T,>({ title, leftButton, CardComponent, data }: SectionSl
           ))}
         </Swiper>
       </div>
-    </div>
+    </Section>
   );
 };
 

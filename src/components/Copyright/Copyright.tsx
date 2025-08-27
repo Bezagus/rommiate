@@ -1,4 +1,5 @@
 import { P } from '@/styles/texts';
+import { Link } from '@/styles';
 
 const Copyright = () => {
   return (
@@ -9,7 +10,13 @@ const Copyright = () => {
       <P size="small" className="hidden md:block">
         |
       </P>
-      <P size="small">Powered by Bezlon.</P>
+      <P size="small" className="flex gap-1">
+        Powered by{' '}
+        <Link href="https://www.bezlon.com" externalLink>
+          Bezlon
+        </Link>
+        .
+      </P>
     </div>
   );
 };

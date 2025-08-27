@@ -22,6 +22,10 @@ import WorldIcon from '@/styles/icons/WorldIcon';
 import WhatsappIcon from '@/styles/icons/WhatsappIcon';
 import LinkedinIcon from '@/styles/icons/LinkedinIcon';
 import InstagramIcon from '@/styles/icons/InstagramIcon';
+import SettingIcon from '@/styles/icons/SettingIcon';
+import MoonIcon from '@/styles/icons/MoonIcon';
+import SunIcon from '@/styles/icons/SunIcon';
+import CloseIcon from '@/styles/icons/CloseIcon';
 
 export {
   BathroomIcon,
@@ -48,4 +52,8 @@ export {
   WhatsappIcon,
   LinkedinIcon,
   InstagramIcon,
+  SettingIcon,
+  MoonIcon,
+  SunIcon,
+  CloseIcon,
 };

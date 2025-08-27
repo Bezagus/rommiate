@@ -5,8 +5,12 @@ import { IconProps } from '@/styles/icons/types';
 
 const styleDefault = {
   text: 'hover:font-bold active:font-black text-center',
-  small: 'py-[8px] px-[20px]  md:px-[32px] text-mobile-small md:text-desktop-small',
-  medium: 'px-[28px] md:px-[42px] py-[10px] text-mobile-p md:text-desktop-p',
+  small: 'text-mobile-small md:text-desktop-small',
+  medium: 'text-mobile-p md:text-desktop-p',
+  padding: {
+    small: 'py-[8px] px-[20px] md:px-[32px]',
+    medium: 'px-[28px] md:px-[42px] py-[10px]',
+  },
 };
 
 const HASH_STYLE: Record<Variant, { className: string; iconColor: string }> = {
@@ -40,6 +44,7 @@ const Button = ({
   rightIcon,
   className,
   href,
+  padding = true,
   ...props
 }: ButtonProps & { href?: string }) => {
   const styles = HASH_STYLE[variant];
@@ -47,6 +52,7 @@ const Button = ({
     'font-gold font-medium rounded-full',
     'flex items-center justify-center gap-2.5',
     disabled && 'opacity-50 pointer-events-none',
+    padding ? styleDefault.padding[size] : '',
     styles.className,
     styleDefault[size],
     className
